@@ -1,0 +1,61 @@
+MondoDB - the database, where we store the database
+
+Express - our web frame work, webframe work is ready to use toolbox for building web apps faster and easily, and not build from scratch
+The Express Web framework - saves time, cleaner organzied code, and handles common tasks (error handling, routing etc)
+
+NodeJS - Allows you to run JS on server, not on browser but on the server
+
+React - Frontend Library
+
+
+---->
+API - What is a API?
+- API is the method for two different application to talk to each other
+-  API also protects as without API any evil minded can access your backend and mess up
+ClietSide <- API -> Backend
+<----
+
+
+---->
+REST API -
+Rest API uses http methods.
+
+GET: Get some posts on Instagram
+Meaning: “When someone asks for data at this URL, respond with something.”
+Real-world analogy: Customer says → “Can I see the notes you have?”
+Usage: Used for reading / fetching data.
+
+
+POST: Create a post
+Meaning: “When someone sends new data to this URL, process it and add it.”
+Real-world analogy: Customer says → “Here’s a new note I want to add to your shop.”
+Usage: Used for creating new data.
+
+
+PUT: Update a post
+
+DELETE: Delete a post
+<------
+
+------>
+📒 Must-Know REST API Status Codes
+✅ Success
+
+200 OK → Request succeeded (used for GET).
+
+201 Created → New resource successfully created (POST).
+
+204 No Content → Request succeeded but nothing to return (DELETE).
+
+⚠️ Client Errors
+
+400 Bad Request → Invalid request (missing data or wrong format).
+
+401 Unauthorized → Not logged in or missing credentials.
+
+404 Not Found → Resource does not exist.
+
+❌ Server Error
+
+500 Internal Server Error → Something went wrong on the server.
+<----
