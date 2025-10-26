@@ -1,0 +1,4 @@
+1. We first set up the pages for each page.
+
+
+2. TailwindCSS +  *DaisyUI* = makes it fast and easy 
