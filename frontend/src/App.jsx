@@ -13,8 +13,6 @@ const App = () => {
   return (
     <div data-theme="forest">
       
-      { /*<Navbar/>*/ }
-      
       <Routes>
         <Route path ="/" element={<HomePage />}/>
         <Route path ="/create" element={<CreatePage />}/>

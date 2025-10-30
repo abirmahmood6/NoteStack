@@ -1,7 +1,9 @@
 import express from "express";
+import cors from "cors"
+import dotenv from "dotenv";
+
 import notesRoutes from "./routes/notesRoutes.js";
 import {connectDB} from "./config/db.js";
-import dotenv from "dotenv";
 import rateLimiter from "./middleware/rateLimiter.js";
 
 // CONTINUE: i) COMMIT FIRST: completed controllers
@@ -17,10 +19,16 @@ const PORT = process.env.PORT || 5001
 // in notesRoutes, take the RES instructions into a separate "notesController" file, and have them as functions, you can call them in the routes file, also change the routes appropiately, e.g - /api/notes, api/posts
 // The idea is to have our server.js and other files organzied 
 
+//middlewares-----
+app.use(
+  cors({
+  origin: "http://localhost:5173",
+})
+)
 app.use(express.json()) // this middleWare will give me access to req.body 
 // ** middleware, its bridge between client(req) and backend server(res) **
-
 app.use(rateLimiter);
+//-------------
 
 // each of this are called "Routes"
 app.use("/api/notes", notesRoutes);

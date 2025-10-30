@@ -1,3 +1,16 @@
+---->
+Cors - CORS is a browser secuirity rule.
+SO when a website tries to get data from another website, the browser may block it for secuirity reason.
+
+
+<----
+---->
+Axios -
+
+
+<----
+
+
 MondoDB - the database, where we store the database
 
 Express - our web frame work, webframe work is ready to use toolbox for building web apps faster and easily, and not build from scratch
