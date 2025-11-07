@@ -1,9 +1,0 @@
-const express = require ("express") // basically importing express server, we basically download express here
-
-const app = express() // We are creating a express application that help us setup our entire server
-
-app.listen(3000)  // we say here that our app is listening on port 3000 for bunch of requests
-// now we have a app runing on PORT 3000
-
-
---Routes--
