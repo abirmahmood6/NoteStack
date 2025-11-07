@@ -51,14 +51,23 @@ const HomePage = () => {
     </div>
 
 
-
+    {/* UNDERSTAND the NOTECARD and this section !!!!!! */}
     {notes.length > 0 && !isRateLimited && (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {/* Screen Sizes - 
+      if screen is small(default) - 1column(top to bottom), if md - 2 columns, if lg- 3 columns*/}
       {notes.map(note => ( 
         <div> 
           <NoteCard key={note._id} note ={note}/>
         </div>
       )) }
+      {/*
+      .map: basically it takes each item in your notesArray(each note) and return something new (like make a NoteCard out of it)
+      you have a list of raw potatoes (your array)
+      .map() peels and fries each one (your callback function)
+      and gives you back a new list of fries 🍟 (the transformed array)
+      
+      
+      */}
 
 
 

@@ -1,1 +1,11 @@
-backend/.env
+# environment variables
+.env
+
+# dependencies
+node_modules/
+
+#notes
+notes.txt
+backend/backendNotes.txt
+backend/expressjsNotes.txt
+frontend/frontEndNotes.txt

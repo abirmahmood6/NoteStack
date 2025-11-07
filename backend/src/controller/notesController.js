@@ -37,7 +37,7 @@ export async function createNote(req, res) {
     const note = new Note({ title, content });
     
     // we store the new note into a variable and return instead of a json {'note created successful'}
-    const savedNote = await note.save(); // WAIT(await) until saves the note in our database and proceed
+    const savedNote = await note.save(); // .save() actually stores the note in MongoDB; without it, the note only exists in memory. 'await' pauses until saving is done.
     res.status(201).json(savedNote); // return the savedNote instead of "note successfully created"
   } catch (error) {
     console.error("Error in createNote controller", error); //console log the error for debugging
@@ -52,7 +52,7 @@ export async function updateNote(req, res) {
       req.params.id,
       {title,content},
       {
-        new: true, //unsure what this does
+        new: true, //tells Mongoose to return the updated document, not the old one.
       }
     );
     if (!updatedNote) return res.status(404).json({message:"Note not found"}); // 404 - Not Found

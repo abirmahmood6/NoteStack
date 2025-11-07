@@ -5,8 +5,8 @@ const router = express.Router();
 
 // each of this are called "Routes"
 router.get("/", getAllNotes)
-router.get("/:id", getNoteById)
 router.post("/", createNote)
+router.get("/:id", getNoteById)
 router.put("/:id", updateNote)
 router.delete("/:id", deleteNote)
 
