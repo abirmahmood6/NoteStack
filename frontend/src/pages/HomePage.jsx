@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import toast from "react-hot-toast";
 import Navbar from "../components/Navbar";
 import RateLimitedUI from "../components/RateLimitedUI";
 import LoadingUI from "../components/LoadingUI";
 import NoteCard from "../components/NoteCard";
+import api from "../lib/axios.js";
 
 const HomePage = () => {
   const[isRateLimited, setRateLimit] = useState(false); 
@@ -16,7 +16,7 @@ const HomePage = () => {
     const fetchNotes = async () => { //arrowFunc vs nrml func?
 
       try {
-        const res = await axios.get("http://localhost:5001/api/notes/");
+        const res = await api.get("/notes");
         console.log(res.data)
         setNotes(res.data)
         setRateLimit(false) // if we able to fetch the notes, then ratelimited is false. As, if backend sees it is ratelimited, we retrieve errorCode 429 instead of notes.

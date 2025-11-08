@@ -34,10 +34,10 @@ export async function getNoteById(req,res) {
 export async function createNote(req, res) {
   try {
     const { title, content } = req.body; // we receive the content from req.BODY (postman)
-    const note = new Note({ title, content });
+    const note = new Note({ title, content }); // Note model file that already used Mongoose.
     
     // we store the new note into a variable and return instead of a json {'note created successful'}
-    const savedNote = await note.save(); // .save() actually stores the note in MongoDB; without it, the note only exists in memory. 'await' pauses until saving is done.
+    const savedNote = await note.save(); // .save() from mongoose, actually stores the note in MongoDB; without it, the note only exists in memory. 'await' pauses until saving is done.
     res.status(201).json(savedNote); // return the savedNote instead of "note successfully created"
   } catch (error) {
     console.error("Error in createNote controller", error); //console log the error for debugging
