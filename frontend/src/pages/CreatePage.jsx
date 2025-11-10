@@ -5,7 +5,7 @@ import toast from "react-hot-toast"
 import api from "../lib/axios.js"
 
 // !! understand usage of .card in the divs below
-// 1) Continue vdo - 2hr49min,  finish delete functionality
+// 1) Continue vdo - 2hr49min,  finish delete functionality UI !!
 
 const CreatePage = () => {
   const [title, setTitle] = useState("")
@@ -88,7 +88,7 @@ const CreatePage = () => {
               {/* bottom: create note btn */}
               <div className="card-actions mb-6 justify-end"> 
                 <button type="submit" className="btn btn-primary" disabled = {loading}> {/*while loading is true, the button is disabled (can’t be clicked again) */}
-                  {loading ? "Creating..." : "Create Note"}v{/* If loading is true then "Creating..." || If loading is false then "Create Note" */}
+                  {loading ? "Creating..." : "Create Note"}{/* If loading is true then "Creating..." || If loading is false then "Create Note" */}
                 </button>
               </div>
               </form>

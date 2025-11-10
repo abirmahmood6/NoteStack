@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Navbar from "../components/Navbar";
-import RateLimitedUI from "../components/RateLimitedUI";
-import LoadingUI from "../components/LoadingUI";
 import NoteCard from "../components/NoteCard";
 import api from "../lib/axios.js";
+import NoNotesUI from "../components/noNotesUI.jsx";
+import RateLimitedUI from "../components/RateLimitedUI";
+import LoadingUI from "../components/LoadingUI";
 
 const HomePage = () => {
   const[isRateLimited, setRateLimit] = useState(false); 
   const[notes, setNotes] = useState([]);
   const[isLoading, setLoading] = useState(true);
 
-
   useEffect(() => {
     const fetchNotes = async () => { //arrowFunc vs nrml func?
-
       try {
         const res = await api.get("/notes");
         console.log(res.data)
@@ -35,21 +34,19 @@ const HomePage = () => {
       }
   };
   fetchNotes();
-
   },[]);
-
-  
 
   return ( 
   <div className='min-h-screen'> {/* Parent Element */}
     <Navbar/> 
     {isRateLimited && <RateLimitedUI/>} {/* why here and not under useEffect()? */}
 
-
     <div className="max-w-7xl mx-auto p-4 mt-6"> 
       {isLoading && <LoadingUI/>}
     </div>
 
+    {/* If no Notes exist, then show a UI to indicate that */}
+    {notes.length === 0 && <NoNotesUI/>}
 
     {/* UNDERSTAND the NOTECARD and this section !!!!!! */}
     {notes.length > 0 && !isRateLimited && (
@@ -57,7 +54,7 @@ const HomePage = () => {
       if screen is small(default) - 1column(top to bottom), if md - 2 columns, if lg- 3 columns*/}
       {notes.map(note => ( 
         <div> 
-          <NoteCard key={note._id} note ={note}/>
+          <NoteCard key={note._id} note ={note} setNotes ={setNotes}/> {/*we pass setNotes to be used in NoteCard*/}
         </div>
       )) }
       {/*
@@ -65,20 +62,11 @@ const HomePage = () => {
       you have a list of raw potatoes (your array)
       .map() peels and fries each one (your callback function)
       and gives you back a new list of fries 🍟 (the transformed array)
-      
-      
       */}
-
-
-
     </div>
-)}
-
-
-
+  )}
   </div>
-    );
+  );
 };
-
 
 export default HomePage;

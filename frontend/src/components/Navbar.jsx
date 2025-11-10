@@ -1,5 +1,3 @@
-import React from 'react'
-import { ToastIcon } from 'react-hot-toast'
 import { Link } from 'react-router'
 import {PlusIcon} from "lucide-react"
 
@@ -18,9 +16,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-        </div>
-
-        
+        </div> 
       
     </header>
   )
