@@ -1,13 +1,12 @@
 import express from "express";
 import cors from "cors"
 import dotenv from "dotenv";
-
 import notesRoutes from "./routes/notesRoutes.js";
 import {connectDB} from "./config/db.js";
 import rateLimiter from "./middleware/rateLimiter.js";
 
 // CONTINUE: i) COMMIT FIRST: completed controllers
-//            2) start MiddleWare & Rate limiting! (1hour,26min)
+//           2) start MiddleWare & Rate limiting! (1hour,26min)
 
 dotenv.config(); // it tells the dotenv package to load all the environment variables from your .env file into process.env.   in line 11 [process.env.port] So proces is a global variable, having the dotenv.config loads the environment variables so your process variable can use the variables you have in .env.
 
