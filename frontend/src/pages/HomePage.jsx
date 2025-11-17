@@ -7,6 +7,8 @@ import NoNotesUI from "../components/noNotesUI.jsx";
 import RateLimitedUI from "../components/RateLimitedUI";
 import LoadingUI from "../components/LoadingUI";
 
+// UNDERSTAND THE GRID Layout of Notes!
+
 const HomePage = () => {
   const[isRateLimited, setRateLimit] = useState(false); 
   const[notes, setNotes] = useState([]);
@@ -46,7 +48,7 @@ const HomePage = () => {
     </div>
 
     {/* If no Notes exist, then show a UI to indicate that */}
-    {notes.length === 0 && <NoNotesUI/>}
+    {notes.length === 0 && !isRateLimited  && <NoNotesUI/>}
 
     {/* UNDERSTAND the NOTECARD and this section !!!!!! */}
     {notes.length > 0 && !isRateLimited && (

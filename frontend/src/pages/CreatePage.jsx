@@ -60,7 +60,7 @@ const CreatePage = () => {
               <h2 className="card-title text-2xl mb-4"> Create New Note </h2>
 
               <form onSubmit={handleSubmit}> {/* call our submit function here*/}
-                <div className="form-control mb-4"> {/* form-control: this div wraps one form input group — keeps label + input neatly aligned */}
+                <div className="form-control mb-4"> {/* form-control = wrapper that neatly stacks a label and its input with proper spacing and alignment.  */}
                   <label className="label"> 
                     <span className="label-text"> Title </span>
                   </label>
