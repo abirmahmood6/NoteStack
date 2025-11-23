@@ -12,7 +12,7 @@ import toast from "react-hot-toast"; //import toast for success/error msg animat
 
 const App = () => {
   return (
-    <div data-theme="coffee">
+    <div data-theme="forest">
       <Routes>
         <Route path ="/" element={<HomePage />}/>
         <Route path ="/create" element={<CreatePage />}/>

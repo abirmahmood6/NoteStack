@@ -45,9 +45,9 @@ const CreatePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base-200 border border-black"> {/* The big canvas for the whole page.*/}
-      <div className="container mx-auto px-4 py-8 border border-black"> {/* centers content horizontally, adds padding */}
-        <div className="max-w-2xl mx-auto border border-black"> {/*Ensures the form doesn’t stretch too wide on big screens */}
+    <div className="min-h-screen bg-base-200"> {/* The big canvas for the whole page.*/}
+      <div className="container mx-auto px-4 py-8"> {/* centers content horizontally, adds padding */}
+        <div className="max-w-2xl mx-auto"> {/*Ensures the form doesn’t stretch too wide on big screens */}
           {/* top: backArrow button */}
           <Link to={"/"} className="btn btn-ghost mb-6"> 
           <ArrowLeftIcon className="size-5" />
@@ -55,8 +55,8 @@ const CreatePage = () => {
           </Link>
           {/* middle: content */} 
           {/* the double divs containers style is part of the DaisyUI component style system — card adds outer layout & appearance.*/}
-          <div className="card bg-base-100 border border-black"> 
-            <div className="card-body border border-black"> 
+          <div className="card bg-base-100"> 
+            <div className="card-body"> 
               <h2 className="card-title text-2xl mb-4"> Create New Note </h2>
 
               <form onSubmit={handleSubmit}> {/* call our submit function here*/}
