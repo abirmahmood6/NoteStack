@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import Navbar from "../components/Navbar";
 import NoteCard from "../components/NoteCard";
 import api from "../lib/axios.js";
-import NoNotesUI from "../components/noNotesUI.jsx";
+import NoNotesUI from "../components/NoNotesUI.jsx";
 import RateLimitedUI from "../components/RateLimitedUI";
 import LoadingUI from "../components/LoadingUI";
 
