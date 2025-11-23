@@ -1,7 +1,8 @@
-# 📝 NoteStack — MERN Stack App
+# 📝 NoteStack — MERN Stack App  
+A full-stack Notes Management Web Application built using the **MERN stack (MongoDB, Express, React, Node.js)**.  
+Create, edit, and manage notes seamlessly — all in one responsive, fast, and secure platform.
 
-A full-stack **Notes Management Web Application** built using the **MERN stack** (MongoDB, Express, React, Node.js).  
-Create, edit, and manage notes seamlessly — all in one responsive and secure platform.
+🔗 **Live App:** https://notestack-vzq0.onrender.com/
 
 ---
 
