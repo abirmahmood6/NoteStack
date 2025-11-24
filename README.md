@@ -6,13 +6,14 @@ Create, edit, and manage notes seamlessly — all in one responsive, fast, and s
 
 ---
 
-## 🚀 Features
 
-- **Full-Stack CRUD Functionality** — Create, read, update, and delete notes in real-time  
-- **Authentication System** — Secure login and signup with password encryption  
-- **RESTful API** — Fast and scalable backend  
-- **Cloud Hosted** — Deployed on **Render**  
-- **Responsive UI** — Works smoothly across desktop and mobile  
+## 🚀 Key Features
+
+- **Full CRUD Functionality** – Create, view, edit, and delete notes in real-time.  
+- **RESTful API Backend** – Scalable and fast server built with Node.js and Express.  
+- **Rate Limiting & Middleware** – Protects the backend from abuse and improves reliability.  
+- **Responsive Design** – Works smoothly on both desktop and mobile devices.  
+- **Cloud Deployment** – Hosted on **Render** for easy access anywhere.  
 
 ---
 
@@ -36,5 +37,71 @@ Create, edit, and manage notes seamlessly — all in one responsive, fast, and s
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
 ---
+## 🎯 Learning Outcomes & Highlights
+
+This project demonstrates:  
+
+- Designing and implementing a **full-stack application** from scratch.  
+- Working with **MongoDB** for data modeling and storage.  
+- Building a **REST API** with **Express** and **Node.js**.  
+- Integrating frontend **React components** with backend APIs.  
+- Deploying a production-ready app on **Render** with environment configuration.  
+
+---
+## 📂 Project Structure
+
+```plaintext
+/backend       # Express server: routes, controllers, models
+/frontend      # React app: components, pages, hooks
+.env           # Environment variables for backend
+package.json   # Dependencies for backend and frontend
+README.md      # Project documentation
+
+
+---
+
+## 🖥️ Screenshots
+
+![Home Page](./frontend/screenshots/home.png)
+![Create Note](./frontend/screenshots/create.png)
+![Note Detail](./frontend/screenshots/detail.png)
+
+
+---
+## ⚡ Getting Started
+
+Follow these steps to run the project locally:
+
+### Prerequisites
+
+- Node.js >= 20  
+- npm >= 10  
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/notestack.git
+cd notestack
+
+# Install backend dependencies
+cd backend
+npm install
+
+# Install frontend dependencies
+cd ../frontend
+npm install
+
+# Running the project
+
+# In one terminal, start the backend
+cd ../backend
+npm run dev
+
+# In another terminal, start the frontend
+cd ../frontend
+npm start
+---
+
 
 
