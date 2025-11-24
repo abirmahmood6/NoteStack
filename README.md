@@ -56,7 +56,7 @@ This project demonstrates:
 .env           # Environment variables for backend
 package.json   # Dependencies for backend and frontend
 README.md      # Project documentation
-
+```
 
 ---
 
